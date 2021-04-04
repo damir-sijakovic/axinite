@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Application</title>
+  <link rel="stylesheet" href="./../../../system/assets/w3.css"> 
+  <link rel="stylesheet" href="./../../../system/assets/allFonts.css"> 
+    <link rel="stylesheet" href="./../../../system/assets/app.css"> 
+ </head>
+ <body class="w3-animate-opacity w3-dark-gray">
+
+
+<div class="w3-bar">
+  <button id="msg-controller-home" class="w3-bar-item w3-light-gray">Home</button>
+  <button id="msg-controller-about"  class="w3-bar-item w3-button">About</button>
+</div>
+
+<div class="w3-container w3-light-gray w3-card-4">
+    <h1> Hello Controller </h1>
+    <p> Hello from <span style="font-family:open_sansextrabold; font-size:24px">home</span> controller.</p>
+    <div class="w3-button w3-deep-purple" id="msg-view-hello"> Test message.js </div>
+    <br><br>
+</div>
+
+
+
+
+  <div id="modalDiv" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+        
+      <div class="w3-container"> 
+        <span onclick="document.getElementById('modalDiv').style.display='none'" 
+        class="w3-button w3-display-topright w3-text-black">&times;</span>
+        <h2 id="modalDivTitle" class="w3-text-black"> Title </h2>        
+        <p id="modalDivBody" class="w3-text-black"> ... </p>
+        
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+<div id="reply"></div> 
+ <script>
+    require('./client.js');
+
+
+ </script>
+ </body>
+</html>

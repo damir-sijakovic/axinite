@@ -1,0 +1,15 @@
+{
+  "name": "IPC",
+  "version": "1.0.0",
+  "description": "Electron framework with IPC.",
+  "main": "system/init.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Damir Sijakovic",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^3.0.9"
+  }
+}
