@@ -14,7 +14,7 @@ document.getElementById('msg-controller-about').addEventListener('click', () =>
 document.getElementById('msg-view-hello').addEventListener('click', () => 
 {
     var reply = ipc.sendSync('sync-message', JSON.stringify({
-        view:'hellor'
+        view:'hello'
     }));
     
     document.getElementById('modalDivBody').innerHTML = reply;
