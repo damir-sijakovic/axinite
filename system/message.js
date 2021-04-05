@@ -13,15 +13,16 @@ module.exports = function(msg)
     // change view in controller
     if (msg.view)
     {
-        /*
-            msg.view.show
-            msg.view.hide
-            msg.view.set
-            msg.view.get            
-        */        
-        //Application.session.currentControllermsg.hello(msg.view);
-        Application.session.currentControllerData[msg.view](msg.view);        
-        return 'Message from "message.js"!';    
+        if (typeof Application.session.currentControllerData[msg.view] === 'function')
+        {
+            return Application.session.currentControllerData[msg.view](msg.view);             
+        }
+        else
+        {
+            Application.system.error('message.js: Controller "'+ Application.session.currentController +'/server.js" have no method named: "' + msg.view + '".');
+            return null;
+        }
+
     }
     
     // model, crud
@@ -30,13 +31,20 @@ module.exports = function(msg)
         return 'model-message';    
     }
     
+    // command.js
     if (msg.system)
     {
-        /*
-            msg.system.set(key,val)
-            msg.system.get(key)        
-        */
-        return 'system-message';    
+        if (typeof Application.system.command[msg.system] === 'function')
+        {
+            if (msg.data)
+            {
+                return Application.system.command[msg.system](msg.data);
+            }
+            return Application.system.command[msg.system]();
+        }
+
+        Application.system.error('message(): "command.js" have no method named: "' + msg.system + '" found.');
+        return null;
     }    
     
     return null;

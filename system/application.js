@@ -9,7 +9,7 @@ module.exports =
         controller: null,
         error: null,
         message: null,
-        commands: null,
+        command: null,
     },
     
     libs: {
@@ -28,5 +28,6 @@ module.exports =
     browserWindow: null,
     mainWindow: null,
     ipc: null,    
-
+    sqlite: null,
+    
 }

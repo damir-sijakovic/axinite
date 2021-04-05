@@ -5,6 +5,7 @@ module.exports = function()
     t.hello = function(data)
     {
         console.log('hello-server-data', data);
+        return 'home/server.js';
     } 
     
     t.two = function(data)

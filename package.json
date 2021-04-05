@@ -1,5 +1,5 @@
 {
-  "name": "IPC",
+  "name": "Axinite",
   "version": "1.0.0",
   "description": "Electron framework with IPC.",
   "main": "system/init.js",
@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^3.0.9"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.2"
   }
 }

@@ -62,7 +62,7 @@ module.exports = function()
             }
             else
             {
-                Application.system.error('controller-message-l-load-not-exists');
+                Application.system.error('ERROR: No template file found in "system/templates".');
             }
             
         }

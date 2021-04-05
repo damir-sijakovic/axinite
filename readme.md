@@ -22,7 +22,7 @@ messaging or how to structure Electron project.
 
 ## I'm new to all of this, how do I run it?
 
-You will need an linux with node.js. In terminal, run in project dir (where package.json is):
+You will need an linux (optional) and node.js. In terminal, run in project dir (where package.json is):
 
             npm install
             

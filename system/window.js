@@ -8,7 +8,8 @@ module.exports = function()
     {
         Application.mainWindow = new Application.browserWindow({width: 800, height: 600});  
         Application.mainWindow.setMenuBarVisibility(false);
-        
+       // Application.mainWindow.icon: __dirname + ‘/Icon/Icon.icns’
+
         Application.mainWindow.on('closed', function () 
         {
             Application.mainWindow = null;

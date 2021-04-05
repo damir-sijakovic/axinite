@@ -2,7 +2,7 @@
 
 module.exports = function()
 {
-    console.log('hello-onload');    
+    console.log('Application started...');    
     Application.system.window.create();
     
   //  Application.system.controller.showMessage({title:'Error', body:'Bad controller name!', color:'red'});

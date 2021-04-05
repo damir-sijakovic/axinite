@@ -1,3 +1,17 @@
+/*    ___           ___                        ___                                     ___     
+     /\  \         /|  |                      /\  \                                   /\__\    
+    /::\  \       |:|  |         ___          \:\  \       ___           ___         /:/ _/_   
+   /:/\:\  \      |:|  |        /\__\          \:\  \     /\__\         /\__\       /:/ /\__\  
+  /:/ /::\  \   __|:|__|       /:/__/      _____\:\  \   /:/__/        /:/  /      /:/ /:/ _/_ 
+ /:/_/:/\:\__\ /::::\__\_____ /::\  \     /::::::::\__\ /::\  \       /:/__/      /:/_/:/ /\__\
+ \:\/:/  \/__/ ~~~~\::::/___/ \/\:\  \__  \:\~~\~~\/__/ \/\:\  \__   /::\  \      \:\/:/ /:/  /
+  \::/__/          |:|~~|      ~~\:\/\__\  \:\  \        ~~\:\/\__\ /:/\:\  \      \::/_/:/  / 
+   \:\  \          |:|  |         \::/  /   \:\  \          \::/  / \/__\:\  \      \:\/:/  /  
+    \:\__\         |:|__|         /:/  /     \:\__\         /:/  /       \:\__\      \::/  /   
+     \/__/         |/__/          \/__/       \/__/         \/__/         \/__/       \/__/  
+    AXINITE - ELECTRON FRAMEWORK
+*/
+
 global["Application"] = require('./application.js');
 Application.config = require('./config.js');
 Application.onload = require('./onload.js');
@@ -7,10 +21,13 @@ Application.electronApp = Application.electron.app;
 Application.browserWindow = Application.electron.BrowserWindow;
 Application.ipc = Application.electron.ipcMain;
 
+Application.sqlite = require('sqlite3').verbose();
+
 Application.system.window = require('./window.js')();
 Application.system.controller = require('./controller.js')();
 Application.system.message = require('./message.js');
 
+Application.system.command = require('./command.js')();
 Application.system.error = require('./error.js');
 
 
