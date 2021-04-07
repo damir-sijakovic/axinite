@@ -9,7 +9,9 @@ module.exports =
         controller: null,
         error: null,
         message: null,
+        amessage: null,
         command: null,
+        model: null,
     },
     
     libs: {
@@ -17,9 +19,10 @@ module.exports =
     },
     
     session: {
-        currentController:null,
-        currentControllerData:null,
-        currentControllerPath:null,
+        currentController: null, 
+        currentModel: null,
+        currentName: null,
+        currentPath: null,        
     },
     
     onload: null,
@@ -29,5 +32,7 @@ module.exports =
     mainWindow: null,
     ipc: null,    
     sqlite: null,
+    fs : null,
+    db: null,
     
 }

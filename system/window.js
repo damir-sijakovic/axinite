@@ -7,8 +7,11 @@ module.exports = function()
     t.create = function()
     {
         Application.mainWindow = new Application.browserWindow({width: 800, height: 600});  
-        Application.mainWindow.setMenuBarVisibility(false);
+  
+       // Application.mainWindow.setMenuBarVisibility(false);
        // Application.mainWindow.icon: __dirname + ‘/Icon/Icon.icns’
+
+       
 
         Application.mainWindow.on('closed', function () 
         {
@@ -20,6 +23,7 @@ module.exports = function()
     {
         var file = 'file://' + file;          
         Application.mainWindow.loadURL(file);  
+        
     } 
         
     return t;

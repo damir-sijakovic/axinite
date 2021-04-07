@@ -1,5 +1,5 @@
 
-module.exports = function(msg)
+module.exports = async function(msg)
 {
     msg = JSON.parse(msg);
         
@@ -32,19 +32,22 @@ module.exports = function(msg)
     // model
     if (msg.model)
     {        
+   
         if (typeof Application.session.currentModel[msg.model] === 'function')
         {
             if (msg.data)
             {               
-                return Application.session.currentModel[msg.model](msg.data);
+                return await Application.session.currentModel[msg.model](msg.data);
             }
-            return Application.session.currentModel[msg.model]();          
+            return await Application.session.currentModel[msg.model]();          
         }
         else
         {
             Application.system.error('message.js: Model "'+ Application.session.currentName +'/model.js" have no method named: "' + msg.model + '".');
             return null;
-        }  
+        }
+        
+
     }
     
     // command.js, system functions like exit etc.

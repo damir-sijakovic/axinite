@@ -10,17 +10,23 @@ module.exports = function()
         
             if (fs.existsSync(file)) 
             {
-                Application.session.currentControllerPath = Application.config.pathSysController + '/' + controller + '/';
-                Application.session.currentController = controller;
+                Application.session.currentPath = Application.config.pathSysController + '/' + controller + '/';
+                Application.session.currentName = controller;
                 if (params)
                 {
                     file = file +'?'+ params;
                 }
                 
-                var serverData = Application.config.pathSysController + '/' + controller + '/server.js';  
-                if (fs.existsSync(serverData)) 
+                var controllerData = Application.config.pathSysController + '/' + controller + '/controller.js';  
+                if (fs.existsSync(controllerData)) 
                 {
-                    Application.session.currentControllerData = require(serverData)(); 
+                    Application.session.currentController = require(controllerData)(); 
+                }
+                
+                var modelData = Application.config.pathSysController + '/' + controller + '/model.js';  
+                if (fs.existsSync(modelData)) 
+                {
+                    Application.session.currentModel = require(modelData)(); 
                 }
                 
                     

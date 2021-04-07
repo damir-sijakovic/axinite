@@ -12,4 +12,7 @@ module.exports =
     pathSysAssets:  __dirname + '/../system/assets',
     pathSysHelpers:  __dirname + '/../app/helpers',
     pathSysTemplates: __dirname + '/../system/templates',
+
+    pathModelDbFile:  __dirname + '/../app/model.db',
+    pathModelSchemaFile:  __dirname + '/../app/model.sql',
 }

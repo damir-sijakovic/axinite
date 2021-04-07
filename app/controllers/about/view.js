@@ -10,6 +10,14 @@ document.getElementById('msg-controller-home').addEventListener('click', () =>
 
 });
 
+document.getElementById('msg-controller-model').addEventListener('click', () => 
+{
+    var reply = ipc.sendSync('sync-message', JSON.stringify({
+        controller:'model'
+    }));
+
+});
+
 
 document.getElementById('msg-view-hello').addEventListener('click', () => 
 {

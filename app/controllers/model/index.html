@@ -7,22 +7,39 @@
   <link rel="stylesheet" href="./../../../system/assets/allFonts.css"> 
     <link rel="stylesheet" href="./../../../system/assets/app.css"> 
  </head>
- <body class="w3-animate-opacity w3-dark-gray">
+ <body class="w3-animate-top w3-dark-gray">
 
 
 <div class="w3-bar">
-  <button id="msg-controller-home" class="w3-bar-item w3-button w3-light-gray">Home</button>
-  <button id="msg-controller-model"  class="w3-bar-item w3-button">Model</button>
+  <button id="msg-controller-home" class="w3-bar-item w3-button">Home</button>
+  <button id="msg-controller-model"  class="w3-bar-item w3-button w3-light-gray">Model</button>
   <button id="msg-controller-about"  class="w3-bar-item w3-button">About</button>
+ 
 
 </div>
 
 <div class="w3-container w3-light-gray w3-card-4">
     <h1> Hello Controller </h1>
-    <p> Hello from <span style="font-family:open_sansextrabold; font-size:24px">home</span> controller.</p>
-    <div class="w3-button w3-deep-purple" id="msg-view-hello"> Test message.js </div>
-    <div class="w3-button w3-red" id="msg-system-exit"> Exit </div>
+    <p> Hello from <span style="font-family:open_sansextrabold; font-size:24px">model</span> controller.</p>
 
+
+    <form class="w3-container">
+
+      <label>First Name</label>
+      <input class="w3-input" type="text" id="input-first-name">
+      
+      <label>Last Name</label>
+      <input class="w3-input" type="text" id="input-last-name">
+      
+      <label>Email</label>
+      <input class="w3-input" type="email" id="input-email">
+      
+      </form> 
+
+      <br>
+
+    <div class="w3-button w3-deep-purple" id="msg-model-add"> Add to database... </div>
+    <div class="w3-button w3-gray" id="msg-model-list"> List data </div>
     <br><br>
 </div>
 
