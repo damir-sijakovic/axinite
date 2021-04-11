@@ -37,9 +37,29 @@ module.exports = async function(msg)
         {
             if (msg.data)
             {               
-                return await Application.session.currentModel[msg.model](msg.data);
+                var modelData = await Application.session.currentModel[msg.model](msg.data);
+
+                var comObj = Application.system.helpers.getComObject();
+                comObj.id = msg.model;
+                comObj.data = modelData;
+                
+
+
+                return comObj;
             }
-            return await Application.session.currentModel[msg.model]();          
+
+            var rowsData = await Application.session.currentModel[msg.model]();
+
+           
+
+            var returnData = {
+                error: null, 
+                requestType: 'model',
+                id: msg.model,                
+                data: rowsData,
+            };
+
+            return returnData;       
         }
         else
         {
@@ -60,7 +80,6 @@ module.exports = async function(msg)
                 return Application.system.command[msg.system](msg.data);
             }
             var data = Application.system.command[msg.system]();
-            //console.log(data);
             return data;
         }
 

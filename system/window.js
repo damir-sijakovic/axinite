@@ -6,8 +6,8 @@ module.exports = function()
         
     t.create = function()
     {
-        Application.mainWindow = new Application.browserWindow({width: 800, height: 600});  
-  
+        Application.mainWindow = new Application.browserWindow({width: 1000, height: 600});  
+        Application.mainWindow.webContents.openDevTools();
        // Application.mainWindow.setMenuBarVisibility(false);
        // Application.mainWindow.icon: __dirname + ‘/Icon/Icon.icns’
 

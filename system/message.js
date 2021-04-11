@@ -57,7 +57,7 @@ module.exports = function(msg)
                 return Application.system.command[msg.system](msg.data);
             }
             var data = Application.system.command[msg.system]();
-            //console.log(data);
+           
             return data;
         }
 

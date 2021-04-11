@@ -12,6 +12,7 @@ module.exports =
         amessage: null,
         command: null,
         model: null,
+        helpers: null,
     },
     
     libs: {
@@ -22,7 +23,10 @@ module.exports =
         currentController: null, 
         currentModel: null,
         currentName: null,
-        currentPath: null,        
+        currentPath: null,
+        throttles:{
+            message: null,
+        }        
     },
     
     onload: null,
@@ -34,5 +38,6 @@ module.exports =
     sqlite: null,
     fs : null,
     db: null,
+    validator: null,
     
 }

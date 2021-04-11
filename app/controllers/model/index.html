@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./../../../system/assets/w3.css"> 
   <link rel="stylesheet" href="./../../../system/assets/allFonts.css"> 
     <link rel="stylesheet" href="./../../../system/assets/app.css"> 
+    <script src="./../../../system/assets/js/validator.min.js"></script>
  </head>
  <body class="w3-animate-top w3-dark-gray">
 
@@ -40,6 +41,8 @@
 
     <div class="w3-button w3-deep-purple" id="msg-model-add"> Add to database... </div>
     <div class="w3-button w3-gray" id="msg-model-list"> List data </div>
+    <div class="w3-button w3-gray" id="msg-model-each"> List each data </div>
+    <div class="w3-button w3-gray" id="msg-model-one"> Get one </div>
     <br><br>
 </div>
 
@@ -53,7 +56,7 @@
         <span onclick="document.getElementById('modalDiv').style.display='none'" 
         class="w3-button w3-display-topright w3-text-black">&times;</span>
         <h2 id="modalDivTitle" class="w3-text-black"> Title </h2>        
-        <p id="modalDivBody" class="w3-text-black"> ... </p>
+        <p id="modalDivBody" style="overflow:auto;" class="w3-text-black"> ... </p>
         
       </div>
       

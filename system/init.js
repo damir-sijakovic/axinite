@@ -25,6 +25,9 @@ Application.ipc = Application.electron.ipcMain;
 Application.fs = require('fs');
 Application.sqlite = require('sqlite3').verbose();
 
+Application.validator = require('validator');
+
+Application.system.helpers = require('./helpers.js')();
 Application.system.window = require('./window.js')();
 Application.system.controller = require('./controller.js')();
 Application.system.message = require('./message.js');
@@ -66,10 +69,11 @@ Application.ipc.on('sync-message', (event, args) =>
    
 });
 
+
 Application.ipc.on('async-message', (event, args) => 
 {
     var data = Application.system.amessage(args).then(data => 
-    {
+    { 
         event.sender.send('async-reply', data);
     });
 });
