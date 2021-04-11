@@ -3,8 +3,13 @@ module.exports =
     dummyControllerPath: 'file://' + __dirname + '/../app/controllers/home/index.html',
     testControllerPath: 'file://' + __dirname + '/../app/controllers/about/index.html',
 
+        
     appName: 'HelloApp',
     appHomeController: 'home',
+    
+    uiShowDevTools: false, 
+    uiShowMenu: false, 
+    
     pathRoot: __dirname + '/../',
     pathApp:  __dirname + '/../app',
     pathSys:  __dirname + '/../system',
