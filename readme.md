@@ -55,11 +55,11 @@ Then to start electron app:
         npm start
 
 
-## Generating and testing controllers via termial
+## Generating and testing controllers via terminal
 
 To generate controller run:
 
-npm run createController hello
+        npm run createController hello
 
 To test run:
 
