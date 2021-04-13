@@ -39,5 +39,6 @@ module.exports =
     fs : null,
     db: null,
     validator: null,
+    twig: null,
     
 }

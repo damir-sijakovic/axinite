@@ -1,7 +1,7 @@
 {
   "name": "Axinite",
-  "version": "1.0.0",
-  "description": "Electron framework with IPC.",
+  "version": "0.1.0",
+  "description": "Electron MVC framework.",
   "main": "system/init.js",
   "scripts": {
     "start": "electron . ",
@@ -11,9 +11,10 @@
   "author": "Damir Sijakovic",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^3.0.9"
+    "electron": "^12.0.2"
   },
   "dependencies": {
+    "node-twig": "^1.2.0",
     "sqlite3": "^5.0.2",
     "validator": "^13.5.2"
   }

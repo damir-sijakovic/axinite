@@ -25,6 +25,7 @@ Application.ipc = Application.electron.ipcMain;
 Application.fs = require('fs');
 Application.sqlite = require('sqlite3').verbose();
 
+Application.twig = require('node-twig').renderFile;
 Application.validator = require('validator');
 
 Application.system.helpers = require('./helpers.js')();

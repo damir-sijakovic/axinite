@@ -17,9 +17,9 @@ It's a prototype. Still under development...
 
 ## How does it work?
 
-#### /app
+#### /app and config.js
 All you should care about is what is in 'app' directory.  
-This is where you should put your files.
+This is where you should put your files. 'config.js' is configuration file.
 
 #### Model
 
@@ -48,10 +48,22 @@ if you need database data.
 
 You will need an linux machine and node.js. In terminal, run in project dir (where package.json is):
 
-            npm install
+        npm install
             
 Then to start electron app:
 
-            npm start
+        npm start
+
+
+## Generating and testing controllers via termial
+
+To generate controller run:
+
+npm run createController hello
+
+To test run:
+
+        npm start -- controller:hello
+
 
 ## Have fun!
