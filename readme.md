@@ -46,7 +46,8 @@ if you need database data.
 
 ## I'm new to all of this, how do I run it?
 
-You will need an linux machine and node.js. In terminal, run in project dir (where package.json is):
+Project is created/tested on 5.9.16-1-MANJARO linux. Its not tested on other systems.   
+You will need an and node.js. In terminal, run in project dir (where package.json is):
 
         npm install
             
